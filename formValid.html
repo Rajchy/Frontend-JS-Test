@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script>
+        function validateForm() {
+                var x = document.forms["myForm"]["firstname"].value;
+                if (x == "") {
+                    alert("Name must be filled out");
+                    return false;
+                }
+                var n = document.forms["myForm"]["checkme"].checked;
+
+                if (n == false) {
+                alert('check the checkbox first');
+                return false
+                }
+                 else {
+                return true
+                }
+            }
+    </script>
+</head>
+<body>
+    <form name ="myForm" onsubmit="return validateForm()" method="post">
+        <input type="text" name="firstname"  />
+        <input type="checkbox" name="checkme" />
+        <input type="submit" value="submit" />
+    </form>
+
+    
+</body>
+</html>
+
